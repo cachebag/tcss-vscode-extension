@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.3.2
+
+- Fix syntax highlighting breaking when CSS strings are commented out
+
 ## 1.3.1
 
 - Add support for `panel` border type
@@ -39,3 +43,4 @@
 ## 0.1.0
 
 - Initial release
+

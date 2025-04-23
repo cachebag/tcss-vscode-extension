@@ -3,9 +3,10 @@
     "injectionSelector": "L:source.python",
     "patterns": [
         {
-            "begin": "(?:(?:DEFAULT_)?CSS = (\"\"\"))",
+            "begin": "^(?!\\s*[#/])\\s*((?:DEFAULT_)?CSS\\s*=\\s*(\"\"\"))",
             "beginCaptures": {
-                "1": { "name": "string.quoted.multi.python punctuation.definition.string.begin.python" }
+                "1": { "name": "meta.css.declaration.python" },
+                "2": { "name": "string.quoted.multi.python punctuation.definition.string.begin.python" }
             },
             "end": "(\"\"\")",
             "endCaptures": {
@@ -16,9 +17,10 @@
             ]
         },
         {
-            "begin": "(?:(?:DEFAULT_)?CSS = ('''))",
+            "begin": "^(?!\\s*[#/])\\s*((?:DEFAULT_)?CSS\\s*=\\s*('''))",
             "beginCaptures": {
-                "1": { "name": "string.quoted.multi.python punctuation.definition.string.begin.python" }
+                "1": { "name": "meta.css.declaration.python" },
+                "2": { "name": "string.quoted.multi.python punctuation.definition.string.begin.python" }
             },
             "end": "(''')",
             "endCaptures": {
@@ -29,9 +31,10 @@
             ]
         },
         {
-            "begin": "(?:(?:DEFAULT_)?CSS = (\"))",
+            "begin": "^(?!\\s*[#/])\\s*((?:DEFAULT_)?CSS\\s*=\\s*(\"))",
             "beginCaptures": {
-                "1": { "name": "string.quoted.single.python punctuation.definition.string.begin.python" }
+                "1": { "name": "meta.css.declaration.python" },
+                "2": { "name": "string.quoted.single.python punctuation.definition.string.begin.python" }
             },
             "end": "(\")",
             "endCaptures": {
@@ -42,9 +45,10 @@
             ]
         },
         {
-            "begin": "(?:(?:DEFAULT_)?CSS = ('))",
+            "begin": "^(?!\\s*[#/])\\s*((?:DEFAULT_)?CSS\\s*=\\s*('))",
             "beginCaptures": {
-                "1": { "name": "string.quoted.single.python punctuation.definition.string.begin.python" }
+                "1": { "name": "meta.css.declaration.python" },
+                "2": { "name": "string.quoted.single.python punctuation.definition.string.begin.python" }
             },
             "end": "(')",
             "endCaptures": {
